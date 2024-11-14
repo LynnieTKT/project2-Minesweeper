@@ -1,4 +1,3 @@
-// src/components/GameBoard.js
 import React, { useState, useEffect, useCallback } from 'react';
 import { placeMines, calculateAdjacentMines, revealSafeCells, checkWinCondition, relocateMine } from '../utils/gameHelpers';
 import Cell from './Cell';

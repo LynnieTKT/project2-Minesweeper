@@ -1,8 +1,7 @@
-/* 导航栏样式 */
 .navbar {
     width: 100%;
     display: flex;
-    justify-content: center; /* 居中对齐导航栏内容 */
+    justify-content: center; 
     align-items: center;
     background-color: #333;
     padding: 10px 0;
