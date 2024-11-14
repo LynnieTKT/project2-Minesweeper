@@ -1,3 +1,12 @@
+/* Global font settings for body */
+body {
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
 .navbar {
   width: 100%;
   display: flex;
@@ -10,6 +19,7 @@
   left: 0;
   right: 0;
   z-index: 1;
+  font-family: 'Roboto', sans-serif; /* Unify navbar font */
 }
 
 .navbar a {
@@ -17,39 +27,50 @@
   text-decoration: none;
   padding: 0 15px;
   font-size: 18px;
+  font-weight: 500;
 }
 
 .navbar a:hover {
   text-decoration: underline;
 }
 
+/* Main container styling */
 .main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-top: 70px; 
+  padding-top: 70px;
   text-align: center;
 }
 
-.welcome-text {
-  font-size: 2em;
-  color: #333;
-  margin-top: 50px; 
+/* Welcome text styling */
+.welcome-text, .rules-title, .game-title { /* Unified style */
+  font-size: 2.5em;
+  color: #161615;
+  margin-top: 50px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 }
 
+/* Game container styling */
 .grid-container {
   display: grid;
   gap: 2px;
   margin: 20px auto;
 }
 
-.game-status {
-  font-size: 18px;
-  margin-bottom: 20px;
+/* Game status styling */
+.game-status, .rules-intro, .rules-list {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.7;
+  font-family: 'Open Sans', sans-serif; /* Unified for game status and rules content */
 }
 
+/* Button styling */
 button {
   cursor: pointer;
   border: none;
@@ -58,16 +79,38 @@ button {
   color: white;
   padding: 10px 15px;
   font-size: 16px;
+  font-weight: 600;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
+/* Rules container styling */
 .rules-container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f1f9ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rules-title {
   text-align: center;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.rules-intro, .rules-list {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.rules-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
 }

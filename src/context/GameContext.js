@@ -1,4 +1,3 @@
-// src/context/GameContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { placeMines, calculateAdjacentMines } from '../utils/gameHelpers';
 

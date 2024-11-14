@@ -22,7 +22,7 @@ function GameBoard({ difficulty = 'easy' }) {
   // Generate a unique key for each difficulty level to store in localStorage
   const storageKey = `minesweeperGameState-${difficulty}`;
 
-  // Function to save the game state to localStorage
+  // Save the game state to localStorage
   const saveGameState = useCallback(() => {
     const gameData = {
       grid,
@@ -46,7 +46,7 @@ function GameBoard({ difficulty = 'easy' }) {
     setWin(false);
     setIsFirstClick(true);
     setRemainingMines(mines);
-    localStorage.removeItem(storageKey); // Clear saved state for the specific difficulty
+    localStorage.removeItem(storageKey); 
   }, [rows, cols, mines, storageKey]);
 
   // Load the saved game state on mount
@@ -80,8 +80,8 @@ function GameBoard({ difficulty = 'easy' }) {
     if (isFirstClick) {
       setIsFirstClick(false);
       if (updatedGrid[rowIndex][colIndex].mine) {
-        relocateMine(updatedGrid, rowIndex, colIndex); // Relocate the mine
-        calculateAdjacentMines(updatedGrid, rows, cols); // Recalculate adjacent mine counts
+        relocateMine(updatedGrid, rowIndex, colIndex); 
+        calculateAdjacentMines(updatedGrid, rows, cols); 
       }
     }
 
